@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#102947" />
+  <title>Website Navigation Preview | LEAD College</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .nav-review-page { min-height: 100vh; background: #f5f8fd; color: #102641; }
+    .nav-review-header { display:flex; min-height:82px; align-items:center; justify-content:space-between; gap:24px; padding:12px max(24px,calc((100vw - 1360px)/2)); border-bottom:1px solid #dbe5f3; background:#fff; }
+    .nav-review-logo img { display:block; width:150px; height:auto; }
+    .nav-review-back { display:inline-flex; align-items:center; gap:9px; color:#2952c8; font-size:.9rem; font-weight:700; text-decoration:none; }
+    .nav-review-back:hover { color:#173e68; }
+    .nav-review-hero { padding:clamp(44px,7vw,88px) max(24px,calc((100vw - 1360px)/2)) 34px; background:linear-gradient(118deg,#102947,#194a78); color:#f6f8fc; }
+    .nav-review-kicker { margin:0 0 14px; color:#a9c9ff; font-size:.78rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    .nav-review-hero h1 { max-width:850px; margin:0; font-size:clamp(2.5rem,6vw,5rem); font-weight:600; letter-spacing:-.055em; line-height:1.02; }
+    .nav-review-hero h1 span { color:#8db7ff; }
+    .nav-review-hero p:last-child { max-width:720px; margin:20px 0 0; color:#d6e4f8; font-size:1.05rem; line-height:1.65; }
+    .nav-review-jump-wrap { position:sticky; top:0; z-index:4; overflow-x:auto; border-bottom:1px solid #d6e2f1; background:rgba(255,255,255,.96); backdrop-filter:blur(14px); }
+    .nav-review-jump { display:flex; width:max-content; min-width:100%; justify-content:center; gap:4px; margin:0 auto; padding:0 16px; list-style:none; }
+    .nav-review-jump a { display:flex; min-height:54px; align-items:center; padding:0 16px; color:#304a68; font-size:.9rem; font-weight:650; text-decoration:none; white-space:nowrap; }
+    .nav-review-jump a:hover,.nav-review-jump a:focus-visible { color:#2952c8; }
+    .nav-review-content { width:min(1360px,calc(100% - 48px)); margin:0 auto; padding:50px 0 84px; }
+    .nav-review-note { display:flex; align-items:flex-start; gap:12px; margin:0 0 30px; padding:16px 18px; border:1px solid #d8e4f3; border-radius:12px; background:#fff; color:#526982; font-size:.9rem; line-height:1.55; }
+    .nav-review-note strong { color:#173e68; }
+    .nav-review-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .nav-review-group { min-width:0; padding:25px 27px 27px; border:1px solid #dce5f1; border-radius:15px; background:#fff; box-shadow:0 8px 26px rgba(16,41,71,.045); scroll-margin-top:76px; }
+    .nav-review-group-heading { display:flex; align-items:center; gap:13px; margin:0 0 20px; padding-bottom:16px; border-bottom:1px solid #e6edf6; }
+    .nav-review-number { display:grid; width:34px; height:34px; flex:0 0 34px; place-items:center; border-radius:10px; background:#edf3fc; color:#2952c8; font-size:.75rem; font-weight:800; }
+    .nav-review-group h2 { margin:0; color:#102641; font-size:1.3rem; font-weight:700; letter-spacing:-.025em; }
+    .nav-review-list,.nav-review-nested { display:grid; gap:11px; margin:0; padding:0; list-style:none; }
+    .nav-review-list > li { color:#304a68; font-size:.95rem; line-height:1.5; }
+    .nav-review-list > li > strong { color:#173e68; font-weight:700; }
+    .nav-review-nested { gap:8px; margin:9px 0 1px 14px; padding-left:15px; border-left:2px solid #dbe7f7; }
+    .nav-review-nested li { color:#60758e; font-size:.9rem; line-height:1.45; }
+    .nav-review-footer { padding:23px 24px; background:#102947; color:#d6e4f8; text-align:center; font-size:.86rem; }
+    .nav-review-footer a { color:#fff; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+    @media (max-width:760px) {
+      .nav-review-header { min-height:70px; }
+      .nav-review-logo img { width:126px; }
+      .nav-review-jump { justify-content:flex-start; }
+      .nav-review-jump a { min-height:48px; padding-inline:12px; font-size:.83rem; }
+      .nav-review-content { width:calc(100% - 32px); padding:30px 0 58px; }
+      .nav-review-grid { grid-template-columns:1fr; gap:13px; }
+      .nav-review-group { padding:21px 20px 23px; }
+      .nav-review-hero p:last-child { font-size:.98rem; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body class="nav-review-page" data-theme="light">
+  <header class="nav-review-header">
+    <a class="nav-review-logo" href="index.html" aria-label="LEAD College home"><img src="lead-logo.png" alt="LEAD College Autonomous" /></a>
+    <a class="nav-review-back" href="index.html"><span aria-hidden="true">←</span> Back to current website</a>
+  </header>
+  <main>
+    <section class="nav-review-hero" aria-labelledby="nav-review-title">
+      <p class="nav-review-kicker">Website structure · discussion draft</p>
+      <h1 id="nav-review-title">A clearer way<br><span>around LEAD.</span></h1>
+      <p>This separate preview gathers the proposed navigation in one place. Use the category bar to scan the groups and nested links before deciding how they should appear in the live menus.</p>
+    </section>
+    <nav class="nav-review-jump-wrap" aria-label="Jump to a navigation category">
+      <ul class="nav-review-jump">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#administration">Administration</a></li>
+        <li><a href="#admission">Admission</a></li>
+        <li><a href="#entrepreneurship">Entrepreneurship</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#quality">Quality &amp; Accreditation</a></li>
+        <li><a href="#placement">Placement</a></li>
+      </ul>
+    </nav>
+    <div class="nav-review-content">
+      <p class="nav-review-note"><span aria-hidden="true">ⓘ</span><span><strong>For discussion:</strong> these are proposed menu groups and labels. The entries are not live links yet.</span></p>
+      <div class="nav-review-grid">
+        <section class="nav-review-group" id="about" aria-labelledby="about-title">
+          <div class="nav-review-group-heading"><span class="nav-review-number">01</span><h2 id="about-title">About Us</h2></div>
+          <ul class="nav-review-list">
+            <li>The LEAD Story</li><li>Vision &amp; Mission</li><li>Director</li><li>Director’s Message</li>
+            <li><strong>Infrastructure</strong><ul class="nav-review-nested"><li>Campus</li><li>Learning Resource Centre</li><li>Library</li><li>Hostels</li><li>Sports Facility</li><li>Other Facilities</li></ul></li>
+            <li>Policies</li><li>RTI</li><li>Financial Statements</li><li>Gallery</li><li>LEAD Operating Teams (LOT)</li>
+          </ul>
+        </section>
+        <section class="nav-review-group" id="academics" aria-labelledby="academics-title">
+          <div class="nav-review-group-heading"><span class="nav-review-number">02</span><h2 id="academics-title">Academics</h2></div>
+          <ul class="nav-review-list">
+            <li><strong>Departments</strong><ul class="nav-review-nested"><li>Management Studies</li><li>Computer Applications</li></ul></li>
+            <li><strong>Faculty</strong><ul class="nav-review-nested"><li>Management Studies</li><li>Computer Applications</li></ul></li>
+            <li>Academic Calendar</li><li>Examination</li><li>Newsletter</li>
+          </ul>
+        </section>
+        <section class="nav-review-group" id="administration" aria-labelledby="administration-title">
+          <div class="nav-review-group-heading"><span class="nav-review-number">03</span><h2 id="administration-title">Administration</h2></div>
+          <ul class="nav-review-list"><li>Deans</li><li>Staff</li><li>Governing Body</li></ul>
+        </section>
+        <section class="nav-review-group" id="admission" aria-labelledby="admission-title">
+          <div class="nav-review-group-heading"><span class="nav-review-number">04</span><h2 id="admission-title">Admission</h2></div>
+          <ul class="nav-review-list">
+            <li>Overview</li><li>Brochure</li>
+            <li><strong>Apply Online</strong><ul class="nav-review-nested"><li>Apply for MBA</li><li>Apply for MCA</li></ul></li>
+          </ul>
+        </section>
+        <section class="nav-review-group" id="entrepreneurship" aria-labelledby="entrepreneurship-title">
+          <div class="nav-review-group-heading"><span class="nav-review-number">05</span><h2 id="entrepreneurship-title">Entrepreneurship</h2></div>
+          <ul class="nav-review-list"><li>LEAD BI</li><li>LEAD IEDC</li></ul>
+        </section>
+        <section class="nav-review-group" id="research" aria-labelledby="research-title">
+          <div class="nav-review-group-heading"><span class="nav-review-number">06</span><h2 id="research-title">Research</h2></div>
+          <ul class="nav-review-list"><li>LEAD Research Centre</li><li>Publications</li><li>LEAD Journal</li></ul>
+        </section>
+        <section class="nav-review-group" id="quality" aria-labelledby="quality-title">
+          <div class="nav-review-group-heading"><span class="nav-review-number">07</span><h2 id="quality-title">Quality &amp; Accreditation</h2></div>
+          <ul class="nav-review-list"><li>HLACT–UK</li><li>IQAC: QLEAD</li><li>NAAC</li><li>NBA</li><li>NIRF</li><li>AICTE</li><li>Statutory Information</li><li>Faculty Initiatives</li></ul>
+        </section>
+        <section class="nav-review-group" id="placement" aria-labelledby="placement-title">
+          <div class="nav-review-group-heading"><span class="nav-review-number">08</span><h2 id="placement-title">Placement</h2></div>
+          <ul class="nav-review-list"><li>Placement Cell</li><li>Placement Policy</li><li>Placement Data</li></ul>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="nav-review-footer">Navigation discussion draft · <a href="index.html">Return to the LEAD College website</a></footer>
+</body>
+</html>
